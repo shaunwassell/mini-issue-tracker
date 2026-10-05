@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mini Issue Tracker</title>
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+  <main>
+    <h1>Mini Issue Tracker</h1>
+
+    <p class="warning">
+      Intentionally vulnerable training application
+    </p>
+
+    <section>
+      <h2>Create Issue</h2>
+
+      <form id="issue-form">
+        <label>
+          Title
+          <input id="title" required>
+        </label>
+
+        <label>
+          Description
+          <textarea id="description" required></textarea>
+        </label>
+
+        <button type="submit">Create issue</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Search Issues</h2>
+
+      <form id="search-form">
+        <input
+          id="search"
+          placeholder="Search issue titles"
+        >
+
+        <button type="submit">Search</button>
+        <button type="button" id="show-all">Show all</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Issues</h2>
+
+      <div id="issues"></div>
+    </section>
+
+    <section>
+      <h2>Other Demo Endpoints</h2>
+
+      <ul>
+        <li>
+          <a href="/hello?name=student">
+            Reflected output demo
+          </a>
+        </li>
+
+        <li>
+          <a href="/api/ping?host=localhost">
+            Ping demo
+          </a>
+        </li>
+
+        <li>
+          <a href="/api/files?name=demo.txt">
+            File demo
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="/app.js"></script>
+
+</body>
+</html>

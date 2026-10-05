@@ -1,0 +1,13 @@
+{
+  "name": "mini-issue-tracker",
+  "version": "1.0.0",
+  "description": "Intentionally vulnerable Node.js application for GitHub security training",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "express": "5.2.1",
+    "sqlite3": "6.0.1"
+  }
+}
