@@ -82,11 +82,12 @@ app.get("/api/issues/search", (req, res) => {
  */
 app.get("/api/users/search", (req, res) => {
   const query = req.query.q || "";
+  const likeQuery = `%${query}%`;
 
   const sql =
-    `SELECT * FROM users WHERE name LIKE '%${query}%'`;
+    "SELECT * FROM users WHERE name LIKE ?";
 
-  db.all(sql, (err, rows) => {
+  db.all(sql, [likeQuery], (err, rows) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
