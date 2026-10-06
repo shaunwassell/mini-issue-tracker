@@ -151,6 +151,10 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`mini-issue-tracker demo app running on http://localhost:${PORT} !!!!`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`mini-issue-tracker demo app running on http://localhost:${PORT} !!!!`);
+  });
+}
+
+module.exports = app;
