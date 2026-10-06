@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-const { exec } = require("child_process");
+const { execFile } = require("child_process");
 
 const db = require("./db");
 
@@ -86,7 +86,7 @@ app.get("/api/issues/search", (req, res) => {
 app.get("/api/ping", (req, res) => {
   const host = req.query.host || "localhost";
 
-  exec(`ping -c 1 ${host}`, (error, stdout, stderr) => {
+  execFile("ping", ["-c", "1", host], (error, stdout, stderr) => {
     if (error) {
       return res.status(500).send(stderr);
     }
