@@ -134,7 +134,7 @@ app.get("/hello", (req, res) => {
         <title>Hello</title>
       </head>
       <body>
-        <h1>Hello ${name}</h1>
+        <h1>Bonjour ${name}</h1>
         <p><a href="/">Back to issues</a></p>
       </body>
     </html>

@@ -61,5 +61,5 @@ test("GET /hello returns an HTML greeting", async () => {
     })
     .expect(200);
 
-  assert.match(response.text, /Hello GH500/);
+  assert.match(response.text, /Bonjour GH500/);
 });
