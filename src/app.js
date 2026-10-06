@@ -151,6 +151,16 @@ app.get("/api/config", (req, res) => {
   });
 });
 
+<<<<<<< Updated upstream
 app.listen(PORT, () => {
   console.log(`mini-issue-tracker demo app running on http://localhost:${PORT}`);
 });
+=======
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`mini-issue-tracker demo app running on http://localhost:${PORT} !!!!`);
+  });
+}
+
+module.exports = app;
+>>>>>>> Stashed changes
