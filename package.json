@@ -4,7 +4,8 @@
   "description": "Intentionally vulnerable Node.js application for GitHub security training",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "test": "node --test"
   },
   "dependencies": {
     "express": "5.2.1",
