@@ -8,10 +8,8 @@ const db = require("./db");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// INTENTIONALLY VULNERABLE:
-// Fake secret included for secret-scanning demonstrations.
-// This is not a real credential.
-const DEMO_API_KEY = "ghp_1234567890abcdefghijklmnopqrstuvwxyz";
+const DEMO_API_KEY = process.env.DEMO_API_KEY;
+const PRETEND_DATABASE_PASSWORD = process.env.PRETEND_DATABASE_PASSWORD;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

@@ -24,4 +24,6 @@ jobs:
         run: npm ci
 
       - name: Run tests
+        env:
+          PRETEND_DATABASE_PASSWORD: ${{ secrets.PRETEND_DATABASE_PASSWORD }}
         run: npm test
