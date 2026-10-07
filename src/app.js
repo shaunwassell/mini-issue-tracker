@@ -12,7 +12,6 @@ const PORT = process.env.PORT || 3000;
 // Fake secret included for secret-scanning demonstrations.
 // This is not a real credential.
 const DEMO_API_KEY = "ghp_1234567890abcdefghijklmnopqrstuvwxyz";
-const ANOTHER_API_KEY = "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";
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
